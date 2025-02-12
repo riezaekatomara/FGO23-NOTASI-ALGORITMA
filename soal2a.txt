@@ -1,0 +1,77 @@
+PROGRAM Konversi_Suhu
+DECLARE
+	pilihan, suhu, hasil : number
+BEGIN
+	DISPLAY "Pilih jenis suhu yang akan dikonversi:"
+	DISPLAY "1. Celcius"
+	DISPLAY "2. Reamur"
+	DISPLAY "3. Fahrenheit"
+	DISPLAY "4. Kelvin"
+	PILIH pilihan
+
+	DISPLAY "Masukkan nilai suhu:"
+	INPUT suhu
+	IF suhu = string:
+		OUTPUT "Nilai suhu tidak valid"
+	ELSE:
+		IF pilihan = 1
+			
+				hasil = (4/5) * suhu
+			
+				OUTPUT "Reamur: ", hasil
+
+				hasil = (9/5) * suhu
+			
+				OUTPUT "Fahrenheit: ", hasil
+
+				hasil = suhu + 273.15
+			
+				OUTPUT "Kelvin: ", hasil
+
+		ELSE IF pilihan = 2
+			
+				hasil = (5/4) * suhu
+			
+				OUTPUT "Celcius: ", hasil
+
+				hasil = (9/4) * suhu + 32
+			
+				OUTPUT "Fahrenheit: ", hasil
+
+				hasil = (5/4) * suhu + 273.15
+			
+				OUTPUT "Kelvin: ", hasil
+
+
+		ELSE IF pilihan = 3
+			
+				hasil = (5/9) * (suhu - 32)
+			
+				OUTPUT "Celcius: ", hasil
+
+				hasil = (4/9) * (suhu - 32)
+			
+				OUTPUT "Reamur: ", hasil
+
+				hasil = (5/9) * (suhu - 32) + 273.15
+			
+				OUTPUT "Kelvin: ", hasil
+
+
+		ELSE:
+			
+			hasil = suhu - 273.15
+			
+			OUTPUT "Celcius: ", hasil
+
+			hasil = (4/5) * (suhu - 273.15)
+			
+			OUTPUT "Reamur: ", hasil
+
+			hasil = (9/5) * (suhu - 273.15) + 32
+			
+			OUTPUT "Fahrenheit: ", hasil
+		END IF
+	END IF
+END	
+
