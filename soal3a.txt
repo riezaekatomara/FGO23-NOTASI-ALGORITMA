@@ -1,0 +1,14 @@
+PROGRAM DISKON
+DECLARE jp : number
+	RESULT : string
+BEGIN
+	INPUT(jp)
+	RESULT = "Masukkan Angka"
+	IF jp < 500.000:
+		RESULT = "jp x 0%"
+	ELSE IF jp >= 500.000 & <= 1.000.000:
+		RESULT = "jp x 5%"
+	ELSE:
+		RESULT = "jp x 10%"	
+	OUTPUT(RESULT)
+END
